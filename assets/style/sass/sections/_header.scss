@@ -1,0 +1,255 @@
+// **** HEADER **** //
+// ================ //
+
+header {
+    position: relative;
+    height: 80vh;
+    // background-image: url('/assets/img/home/bg2-home.png'), url('/assets/img/home/bg1-home.png');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+}
+
+.bg-blue {
+    position: absolute;
+    z-index: -5;
+    width: 100%;
+
+    @include respoM {
+        height: 525px;
+    }
+    @include respoS {
+        height: 575px;
+    }
+    @include respoXXL {
+        height: 680px;
+    }
+}
+
+.nav-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .logo {
+        @include size (13rem, 5rem);
+        padding-left: 85px;
+        @include respoXL {
+            padding-left: 80px;
+            @include size (13rem, 3rem);
+        }
+    }
+}
+
+#menu-button{
+    @include respoM {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        color: $color-text;
+        line-height: 50px;
+        text-align: center;
+        font-size: 40px;
+        transition: all .5s;
+
+        &:after{
+            content:'×';
+        }
+    }
+}
+
+#menu-button.close{
+    @include respoM {
+        color: $color-text;
+
+        &:after{
+            content:'≡';
+        }
+    }
+}
+
+#menu{
+
+    @include respoM {
+        transition:transform .5s;
+        position:absolute;
+        width:100%;
+        max-width:480px;
+        transform:translateY(-300px);
+    }
+}  
+
+#menu.show-menu{
+    transform:translateY(51px);
+    background-color: #424D83;
+    height: 50vh;
+}
+
+nav {
+    height: 60px;
+    padding: 0 40px;
+    padding-left: 80px;
+    @include flex (flex, space-between, flex-end, row);
+    @include respoXL {
+        padding: 0px;
+    }
+    @include respoM {
+        @include flex (flex, center, center, column);
+        padding: 0 50% 0 50%;
+    }
+
+
+    ul {
+        list-style-type: none;
+        color: $color-text;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        @include respoXL {
+            font-size: 1rem;
+        }
+        @include respoM {
+            @include flex (flex, center, center, column);
+        }
+
+
+        li {
+            margin-right: 40px;
+            height: 80px;
+            padding: 40px 20px 0 20px;
+            @include respoL {
+                padding-right: 20px;
+            }
+            @include respoM {
+                padding: 15px;
+                margin: 5px;
+                height: fit-content;
+            }
+        }
+
+        .nav-content {
+            @include respoM {
+                text-align: center;
+            }
+            &:hover {
+                background-color: $color-button;
+                border-radius: 0% 0% 5px 5px;
+                width: fit-content;
+                @include respoM {
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .login {
+            background-color: $color-text;
+            margin-top: 30px;
+            padding-top: 0px;
+            color: $color-button;
+            text-align: center;
+            border-radius: 5px;
+            height: 50px;
+            @extend %flex-center;
+            flex-direction: row;
+            @include respoXL {
+                margin-top: 28px;
+                padding-top: 13px;
+            }
+            
+            span {
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+
+.pst-header {
+    @include flex (flex, space-between, center, row);
+    padding: 80px;
+    @include respoL {
+
+    }
+
+    .pst-text {
+        color: $color-text;
+
+        p {
+            font-size: 1.5rem;
+            @include respoXL {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+
+.org-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    @include respoS {
+        flex-wrap: wrap;
+    }
+    @include respoXXL {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .domain-list, .search {
+        background-color: $color-div;
+        border-radius: 4px;
+        border: 0;
+        color: $color-text;
+        outline: none;
+        
+        &::placeholder {
+            color: $color-text;
+        }
+    }
+    
+    .search {
+        width: 270px;
+        margin-top: 50px;
+        padding: 13px 0px 13px 10px;
+        @include respoXXS {
+            width: 195px;
+        }
+    }
+    
+    .domain-list {
+        padding: 12px 10px 12px 10px;
+        margin-left: 2px;
+        @include respoXS {
+            margin: 0;
+        }
+    }
+    
+    .btn-header {
+        margin-left: 15px;
+        @include respoM {
+            margin: 0;
+        }
+        @include respoXXS {
+            @include size (126px, 41px);
+            padding-bottom: 55px;
+        }
+    }
+
+}
+
+
+.illu-home {
+    @include respoXXL {
+        width: 500px;
+    }
+    @include respoL {
+        display: none;
+    }
+}

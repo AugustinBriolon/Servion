@@ -1,0 +1,117 @@
+.content-host {
+    @extend %flex-center;
+    flex-direction: column;
+
+    .title-host {
+        margin-top: 100px;
+        text-align: center;
+    }
+}
+
+.card-host {
+    padding: 50px 0px 50px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+
+    @include respoXXL {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    @include respoL {
+        padding: 50px 65px 50px 65px;
+    }
+
+    @include respoM {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    @include respoS {
+        padding: 0px;
+    }
+}
+
+.card-h {
+    height: 35rem;
+    width: 20vw;
+    padding: 0 50px 0 50px;
+    border-radius: 1%;
+    background: #ffffff;
+    box-shadow:  5px 5px 75px #c7c7c7,
+                -5px -5px 75px #f9f9f9;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    @include respoXXL {
+        width: 40vw;
+    }
+
+    @include respoM {
+        width: 60vw;
+    }
+
+    @include respoXXS {
+        width: 80vw;
+    }
+
+    img,
+    h3{
+        padding-top: 35px;
+    }
+
+    hr {
+        margin: 60px 0 30px 0;
+    }
+
+    .price {
+        font-size: calc(20px + 0.5vw);
+    }
+
+    a {
+        display: none;
+        margin-top: 100px;
+        padding: 20px;
+        background-color: $color-bg;
+        @extend %flex-center;
+        flex-direction: row;
+
+        span {
+            padding: 0 15px 0 15px;
+        }
+    }
+
+    &:hover {
+        transition: all 1s ease-in-out;
+        height: 45rem;
+
+    .head-b {
+        @include size (inherit, 5px);
+        background-color: $color-button;
+        padding: 5px;
+    }
+
+    a {
+        display: block;
+    }
+    }
+}
+
+.card-h2 {
+    border-radius: 1%;
+    height: 45rem;
+
+    .head-b {
+        @include size (inherit, 5px);
+        background-color: $color-button;
+        padding: 5px;
+    }
+
+    a {
+        display: block;
+    }
+}

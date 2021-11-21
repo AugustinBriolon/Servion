@@ -1,0 +1,91 @@
+.content-whyus {
+    margin: 150px 0 150px 0;
+    @extend %flex-center;
+    flex-direction: column;
+
+    .title-whyus {
+        @extend %flex-center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.describ-whyus {
+    padding: 0 150px 0 150px;
+    @extend %grid-2;
+
+    @include respoXL {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    @include respoS {
+        padding: 0 50px 0 50px;
+    }
+
+    .text-whyus {
+
+        @include respoXL {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .img-whyus {
+        padding: 100px;
+        :nth-child(1){
+            width: 18%;
+            transform: translate(403px, 67px);
+        }
+        :nth-child(2) {
+            width: 100%;
+        }
+        :nth-child(3){
+            width: 18%;
+            transform: translate(-14px, -82px);
+        }
+
+        @include respoXXL {
+            :nth-child(1){
+                width: 18%;
+                transform: translate(340px, 67px);
+            }
+            :nth-child(2) {
+                width: 100%;
+            }
+            :nth-child(3){
+                width: 18%;
+                transform: translate(-14px, -82px);
+            }
+        }
+
+        @include respoXL {
+            display: none;
+        }
+    }
+}
+
+.place-whyus {
+    padding-top: 70px;
+    margin-right: 25%;
+    display: flex;
+    flex-direction: row;
+
+    @include respoXL {
+        margin: 0;
+    }
+
+    img {
+        height: fit-content;
+    }
+
+    .texts-whyus {
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            padding-top: 25px;
+        }
+    }
+}

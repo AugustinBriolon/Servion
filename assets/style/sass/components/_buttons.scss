@@ -1,0 +1,29 @@
+// **** BUTTONS **** //
+// ================= //
+
+.btn-w{
+    background-color: $color-button;
+    color: $color-text;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.btn-b{
+    background-color: $color-text;
+    color: $color-button;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+

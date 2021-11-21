@@ -1,0 +1,98 @@
+.content-support {
+    padding-top: 100px;
+    background-color: $color-bg;
+    @extend %flex-center;
+    flex-direction: column;
+
+    .title-support {
+        @extend %flex-center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+.card-support {
+    margin: 50px 0 75px 0;
+    @extend %grid-2;
+    gap: 150px;
+
+    @include respoXL {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .card-s1 {
+        background-color: $color-button;
+    }
+    .card-s2 {
+        background-color: $color-div;
+    }
+
+    .card-s {
+        @include size (40vw, fit-content);
+        border-radius: 1%;
+
+        @include respoL {
+            width: 60vw;
+        }
+
+        @include respoS {
+            width: 80vw;
+        }
+    }
+
+    .img-support {
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+
+        @include respoL {
+            justify-content: center;
+        }
+
+        img {
+            height: fit-content;
+        }
+
+        :nth-child(1) {
+            padding: 35px;
+        }
+
+        :nth-child(2) {
+
+            @include respoL {
+                display: none;
+            }
+        }
+    }
+}
+
+
+.text-support {
+    color: $color-text;
+    padding: 20px 40px;
+
+    p {
+        margin-top: 20px;
+        line-height: 40px;
+    }
+}
+
+
+.btn-support {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+        @extend %flex-center;
+        flex-direction: row;
+        margin: 0 50px 30px 0;
+
+        span {
+            padding: 0 10px 0 5px;
+        }
+    }
+}
