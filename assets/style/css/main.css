@@ -69,7 +69,7 @@ p {
   background-color: #93A5FF;
   color: #ffff;
   text-decoration: none;
-  padding: 13px;
+  padding: 10px;
   border-radius: 4px;
   text-align: center;
   font-family: "Nunito", sans-serif;
@@ -81,7 +81,7 @@ p {
   background-color: #ffff;
   color: #93A5FF;
   text-decoration: none;
-  padding: 13px;
+  padding: 10px;
   border-radius: 4px;
   text-align: center;
   font-family: "Nunito", sans-serif;
@@ -977,7 +977,7 @@ nav ul .login span {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 900px) {
   .org-btn {
     flex-direction: column;
     align-items: center;
@@ -1014,6 +1014,7 @@ nav ul .login span {
 }
 .org-btn .btn-header {
   margin-left: 15px;
+  min-width: 220px;
 }
 @media screen and (max-width: 900px) {
   .org-btn .btn-header {

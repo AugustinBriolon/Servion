@@ -197,7 +197,7 @@ nav {
     @include respoS {
         flex-wrap: wrap;
     }
-    @include respoXXL {
+    @include respoM {
         flex-direction: column;
         align-items: center;
     }
@@ -233,6 +233,7 @@ nav {
     
     .btn-header {
         margin-left: 15px;
+        min-width: 220px;
         @include respoM {
             margin: 0;
         }
